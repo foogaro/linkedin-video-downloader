@@ -1,6 +1,6 @@
 # LinkedIn Video Downloader
 
-#DISCLAIMER
+# DISCLAIMER
 This piece of software is for my personal use, and I am not responsible for the way you are going to use it.
 So, stay out of trouble, make jars and not wars!
 
