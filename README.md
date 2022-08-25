@@ -105,7 +105,7 @@ I'm not going to describe the code, you can take a look at it yourself, but I ca
 
 The implementation is to be considered at best effort, which means it works on my computer! :computer:
 
-The last piece of the implementation, downloading/streaming the file back, was possible thanks to Swathi Prasad and her repo :octocat: [https://github.com/swathisprasad/download-using-streaming-response-body](https://github.com/swathisprasad/download-using-streaming-response-body)
+The last piece of the implementation, downloading/streaming the file back, was possible thanks to @swathisprasad (Swathi Prasad) and her repo :octocat: [https://github.com/swathisprasad/download-using-streaming-response-body](https://github.com/swathisprasad/download-using-streaming-response-body)
 
 For the rest, of course thanks to StackOverflow.
 
