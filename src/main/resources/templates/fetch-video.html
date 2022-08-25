@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>LinkedIn Video Downloader</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/css/shards.min.css">
+    </head>
+    <body>
+        <div class="container my-5">
+            <h2 class="mb-5">LinkedIn Video Downloader</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="#" th:action="@{/fetch}" th:object="${linkedInVideo}" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="qualityUrl" class="col-form-label">Video Quality URL</label>
+                                <input type="text" th:field="*{qualityUrl}" class="form-control" id="qualityUrl" placeholder="Video Quality URL">
+                                <!--
+                                https://streamweu-livectorprodmedia17-euwe.licdn.com/c50f2327-7fa7-4cc8-8a2c-35711eb5296d/L4E60a4445e9d065000-livemanifest.ism/manifest(format=m3u8-aapl-v3)
+                                -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="fragmentsUrl" class="col-form-label">Video Fragments URL</label>
+                                <input type="text" th:field="*{fragmentsUrl}" class="form-control" id="fragmentsUrl" placeholder="Video Fragments URL">
+                                <!--
+                                https://streamweu-livectorprodmedia17-euwe.licdn.com/c50f2327-7fa7-4cc8-8a2c-35711eb5296d/L4E60a4445e9d065000-livemanifest.ism/QualityLevels(3200000)/Manifest(video,format=m3u8-aapl-v3,audiotrack=audio_und,filter=L4E60a4445e9d065000-trimming_filter_c50f2327-7fa7-4cc8-8a2c-35711eb5296d)
+                                -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="fragmentUrl" class="col-form-label">Sample Fragment URL</label>
+                                <input type="text" th:field="*{fragmentUrl}" class="form-control" id="fragmentUrl" placeholder="Sample Fragment URL">
+                                <!--
+                                https://streamweu-livectorprodmedia17-euwe.licdn.com/c50f2327-7fa7-4cc8-8a2c-35711eb5296d/L4E60a4445e9d065000-livemanifest.ism/QualityLevels(3200000)/Fragments(video=93067200,format=m3u8-aapl-v3,audiotrack=audio_und)
+                                -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mt-5">
+                                <input type="submit" class="btn btn-primary" value="Fetch data">
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

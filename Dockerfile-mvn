@@ -1,0 +1,10 @@
+FROM maven:3.8.6-openjdk-11 as build
+WORKDIR /build
+COPY . .
+RUN mvn -e clean package
+
+FROM adoptopenjdk/openjdk11:alpine as release
+WORKDIR /app
+COPY --from=build /build/target/linkedin-video-downloader-1.0.0.jar /app/app.jar
+ENTRYPOINT ["java", "-jar"]
+CMD ["/app/app.jar"]

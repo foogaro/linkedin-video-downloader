@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>LinkedIn Video Downloader</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="static/css/shards.min.css">
+    </head>
+    <body>
+        <div class="container my-5">
+            <h2 class="mb-5">LinkedIn Video Downloader</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="#" th:action="@{/download}" th:object="${linkedInVideo}" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="qualityLevel" class="col-form-label">Video Quality Levels</label>
+                                <select th:field="*{qualityLevel}" class="form-control" id="qualityLevel">
+                                    <option th:each="qualityLevel : ${qualityLevels}"
+                                            th:value="${qualityLevel.qualityLevel}"
+                                            th:text="${qualityLevel.description}"></option>
+                                </select>
+                                <input type="hidden" th:field="*{qualityUrl}" class="form-control" id="qualityUrl">
+                                <input type="hidden" th:field="*{fragmentsUrl}" class="form-control" id="fragmentsUrl">
+                                <input type="hidden" th:field="*{fragmentUrl}" class="form-control" id="fragmentUrl">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mt-5">
+                                <input type="submit" class="btn btn-primary" value="Download video">
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
