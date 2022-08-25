@@ -17,7 +17,7 @@ Thus, I need to build my own LinkedIn Video Downloader! :expressionless:
 ## The idea
 Now, the idea was... I don't think I will find a link (src or href) to some video into the source[^1] of some sort of format (mp4, webm, vid mkv, avi, mov and so on), but I do think I'll find something related to video streaming... but not in the source[^1], surely at network level.
 
-So, I opened Chrome and its the DevTools bar, selected the Network panel, and then I typed (pasted) my LinkedIn video event URL in the address bar and pressed enter!
+So, I opened Chrome and its DevTools bar, selected the Network panel, and then I typed (pasted) my LinkedIn video event URL in the address bar and pressed enter!
 
 And that's what I got.
 
@@ -91,7 +91,7 @@ Fragments, I see fragments everywhere.
 
 ![More video stream fragments](images/fragment-03.png)
 
-## Other thoughts:
+## Other outcomes:
 - no authentication required to download the video :unlock:
 - no need to keep&pass cookie(s) at each request :cookie:
 - no redirects :end:
